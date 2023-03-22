@@ -8,6 +8,7 @@ import { Task } from './components/Task';
 
 
 function App() {
+
   const [tasks,setTasks] = useState([
     {
       id:uuidv4(),
@@ -17,6 +18,7 @@ function App() {
   ]);
   
   const [newTask,setNewTask] = useState('')
+
   function handleCreateNewTask() {
     event.preventDefault()
     const task ={
@@ -25,6 +27,7 @@ function App() {
       isComplete:false
     }
     setTasks([...tasks,task])
+    setNewTask('')
   }
 
   function handleNewTasksChange(){
@@ -34,6 +37,23 @@ function App() {
 
   function handleNewTaskInvalid() {
     event.target.setCustomValidity('Esse campo é obrigatório!');
+  }
+
+  function deleteTask(id) {
+    const tasksWithoutDeletedOne = tasks.filter(task => {
+      return task.id !== id;
+    })
+    setTasks(tasksWithoutDeletedOne);
+  }
+
+  function alterCompleteTask(id){
+    const newTasks = tasks.map(task => {
+      if(task.id === id){
+        task.isComplete = !task.isComplete;
+      }
+      return task
+    })
+    setTasks(newTasks);
   }
 
   return (
@@ -46,7 +66,7 @@ function App() {
               <textarea 
                 name="task" 
                 placeholder="Adicione uma nova tarefa"
-                value ={newTask.task}
+                value ={newTask}
                 onChange={handleNewTasksChange}
                 onInvalid={handleNewTaskInvalid}
                 required 
@@ -61,28 +81,30 @@ function App() {
           <header>
             <div className={styles.created}>
               <p>Tarefas criadas</p>
-              <span>0</span>
+              <span>{tasks.length}</span>
             </div>
             <div className={styles.done}>
               <p>Concluídas</p>
               <span>0</span>
             </div>
           </header>
-          
-          if(true){
-            <EmpetyTasks/>
-          }else{
+          {tasks.length > 0 &&
             tasks.map(task=>{
               return(
-                  <Task
-                    key={task.id}
-                    task={task.task}
-                    isComplete={task.isComplete}
-                  />
+                <Task
+                  key={task.id}
+                  id={task.id}
+                  task={task.task}
+                  isComplete={task.isComplete}
+                  onDeleteTask={deleteTask}
+                  onAlterCompleteTask={alterCompleteTask}
+                />
               )
-            }) 
+            })  
           }
-         
+          {tasks.length === 0 &&
+            <EmpetyTasks/>
+          }
           
         </main>
 
