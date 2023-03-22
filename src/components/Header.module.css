@@ -1,0 +1,27 @@
+.header {
+    background: var(--gray-700);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 12.5rem;
+}
+.header img {
+    height: 2.25rem;
+    margin-right: 0.75rem;
+}
+.header p{
+    display: flex;
+}
+.header p span{
+    font-size: 2.5rem;
+    font-weight: 900;
+    height: 3.5rem;
+    font-family: 'Inter';
+    line-height: 48px;
+}
+.to{
+    color: var(--blue);
+}
+.do{
+    color: var(--purpleDark);
+}
