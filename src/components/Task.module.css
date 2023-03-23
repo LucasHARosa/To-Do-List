@@ -30,8 +30,8 @@ p{
 .CheckboxRoot {
     background-color: transparent;
     cursor: pointer;
-    width: 17.45px;
-    height: 17.45px;
+    width: 1.090rem;
+    height: 1.090rem;
     border-radius: 99px;
     border: 2px solid var(--blue);
     display: flex;
@@ -45,8 +45,12 @@ p{
     cursor: pointer;
     width: 1.090rem;
     height: 1.090rem;
-    border-radius: 0.7rem;
+    border-radius:99px;
     background-color: var(--purpleDark);
+    border: 2px solid var(--purpleDark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
     
 }
