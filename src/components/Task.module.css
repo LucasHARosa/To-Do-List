@@ -20,7 +20,7 @@
     padding: 1rem;
    
 }
-.task > div > p{
+p{
     color: var(--gray-100);
     font-weight: 400;
     font-size: 0.875rem;
@@ -32,11 +32,26 @@
     cursor: pointer;
     width: 17.45px;
     height: 17.45px;
-    border-radius: 999px;
-    box-shadow: 0 0 0 2.5px var(--blue);
+    border-radius: 99px;
+    border: 2px solid var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
-  }
+}
 
 .CheckboxIndicator {
     color: var(--gray-100);
+    cursor: pointer;
+    width: 1.090rem;
+    height: 1.090rem;
+    border-radius: 0.7rem;
+    background-color: var(--purpleDark);
+    
+    
+}
+
+.TextTasknot{
+    color: var(--gray-300);
+    text-decoration:line-through;
 }

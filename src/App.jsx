@@ -19,6 +19,8 @@ function App() {
   
   const [newTask,setNewTask] = useState('')
 
+  let taskCompleted=0;
+
   function handleCreateNewTask() {
     event.preventDefault()
     const task ={
@@ -56,6 +58,17 @@ function App() {
     setTasks(newTasks);
   }
 
+  function tasksCompleted(){
+    let numberTaskCompleted = tasks.reduce((result, task) =>{
+      if(task.isComplete){
+        result++;
+      }
+      
+      return result
+    },0)
+    return numberTaskCompleted;
+  }
+
   return (
     <div>
       <Header/>
@@ -85,7 +98,8 @@ function App() {
             </div>
             <div className={styles.done}>
               <p>Concluídas</p>
-              <span>0</span>
+              {taskCompleted = tasksCompleted()}
+              <span>{taskCompleted} de {tasks.length}</span>
             </div>
           </header>
           {tasks.length > 0 &&

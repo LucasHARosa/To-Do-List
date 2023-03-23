@@ -7,21 +7,32 @@ export function Task(props){
 
     function handleDeleteTask(){
         props.onDeleteTask(props.id);
+
     }
     function handleCompletTask(){
         props.onAlterCompleteTask(props.id);
     }
+    
 
     return(
         
         <div className={styles.task}>
             <div>
-                <Checkbox.Root className={styles.CheckboxRoot}>
+                <Checkbox.Root className={styles.CheckboxRoot} onCheckedChange={handleCompletTask} checked={props.isComplete}>
                     <Checkbox.Indicator className={styles.CheckboxIndicator}>
                         <CheckIcon />
                     </Checkbox.Indicator>
                 </Checkbox.Root>
-                <p className={styles.task}>{props.task}</p>
+                {props.isComplete &&
+                    <p className={styles.TextTasknot}>
+                        {props.task}
+                    </p>
+                }
+                {props.isComplete == false &&
+                    <p>
+                        {props.task}
+                    </p>
+                }
                 
             </div>
             <button onClick={handleDeleteTask}  title="Deletar tarefa">
