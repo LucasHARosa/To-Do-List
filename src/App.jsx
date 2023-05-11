@@ -98,8 +98,7 @@ function App() {
             </div>
             <div className={styles.done}>
               <p>Concluídas</p>
-              {taskCompleted = tasksCompleted()}
-              <span>{taskCompleted} de {tasks.length}</span>
+              <span>{taskCompleted = tasksCompleted()} de {tasks.length}</span>
             </div>
           </header>
           {tasks.length > 0 &&
