@@ -21,10 +21,8 @@ export const THEME = extendTheme({
     },
   },
   fonts: {
-    mono: "Inter_400Regular",
-    heading:  "Montserrat_700Bold",
-    //body: "Montserrat_400Regular",
-    //light: "Montserrat_300Light"
+    regular: "Inter_400Regular",
+    bold:  "Inter_700Bold",
   },
   fontSizes: {
     xs: 12,
@@ -38,3 +36,6 @@ export const THEME = extendTheme({
     33: 148
   }
 })
+
+export const INTER_400 = "Inter_400Regular"
+export const INTER_700 = "Inter_700Bold"
