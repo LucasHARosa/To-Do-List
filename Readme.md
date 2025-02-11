@@ -1,7 +1,7 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/LucasHARosa/To_Do_List)
-![GitHub language count](https://img.shields.io/github/languages/count/LucasHARosa/To_Do_List)
-![GitHub top language](https://img.shields.io/github/languages/top/LucasHARosa/To_Do_List)
-![GitHub last commit](https://img.shields.io/github/last-commit/LucasHARosa/To_Do_List)
+![GitHub repo size](https://img.shields.io/github/repo-size/LucasHARosa/To-Do-List)
+![GitHub language count](https://img.shields.io/github/languages/count/LucasHARosa/To-Do-List)
+![GitHub top language](https://img.shields.io/github/languages/top/LucasHARosa/To-Do-List)
+![GitHub last commit](https://img.shields.io/github/last-commit/LucasHARosa/To-Do-List)
 
 # To Do List
 
