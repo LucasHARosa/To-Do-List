@@ -5,7 +5,7 @@
 
 # To Do List
 
-<strong>To Do List</strong> É uma aplicação desenvolvida em ReactJS para web e react Native para Mobile, que simula uma lista de atividades. Trata-se de um projeto Front End onde o objetivo é treinar as habilidades de comunicação de componentes e estilização da página. 
+<strong>To Do List</strong> É uma aplicação desenvolvida em ReactJS para web e react Native para Mobile, que simula uma lista de atividades. Trata-se de um projeto Front End onde o objetivo é treinar as habilidades de comunicação de componentes e estilização da página 
 
 ## ReactJS
 <p align="center">
